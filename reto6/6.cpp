@@ -9,6 +9,7 @@ int solution(vector<int>A){
     cout<<A[2];
     cout<<A[3];
     cout<<A[4]<<endl;
+    if ()
     return 5;
 }
 int main(){

@@ -2,7 +2,9 @@
 #include<vector>
 #include <bits/stdc++.h>
 using namespace std;
+
 vector<int> solution(int N, vector<int> A){
+     int x;
      vector<int>cont;
       for(int i=0;i<N;i++){
         cont.push_back(0);
@@ -13,9 +15,10 @@ vector<int> solution(int N, vector<int> A){
          }
          else
          {
-             if (A[k]=N+1){
-                *max_element(a.begin(), a.end());
-             }
+           x=*max_element(cont.begin(), cont.end());
+           for(int i=0; i<cont.size(); i++){
+             cont[i]=x;
+           }
          }
 
         }
@@ -27,17 +30,23 @@ int main()
      int vari;
      int N;
      vector<int> res;
+
      cout <<"compa incerte el numero de contadores: ";
      cin>>N;
+
      cout<<"brother inserte cantidad de datos: ";
      cin>>numel;
+
      vector<int> A;
+
      for(int i=0;i<numel;i++){
         cout<<"parcero inserte el numero"<<i+1<< ": ";
         cin>>vari;
         A.push_back(vari);
     }
+
     res = solution(N,A);
+
     for(int i=0;i<res.size();i++){
         cout<<res[i]<<",";
     }
